@@ -1,3 +1,5 @@
+#summary Introduction and tutorial. (This page is still under construction.)
+
 = Introduction =
 
 You can find some demo at:
@@ -12,7 +14,58 @@ http://youtu.be/7xNeUbsScUc
 
 = How to edit snippet files =
 
-The snippet files are stored in XML format, one XML file for one language. To create a snippet file for a language, you need to create a XML file with name _"language.xml"_ under _"Notepad++/plugin/config/CodeExpress"_. Supported language names are
+The snippet files are stored in XML format, one XML file for one language. To create a snippet file for a language, you need to create a XML file with name _"language name.xml"_ under _"Notepad++/plugin/config/CodeExpress"_. Supported language names are
 
+|| txt      || php     || c        || cpp      || cs     ||
+|| objc     || java    || rc       || html     || xml    ||
+|| makefile || pascal  || batch    || ini      || nfo    ||
+|| user     || asp     || sql      || vb       || js     ||
+|| css      || perl    || python   || lua      || tex    ||
+|| fortran  || bash    || flash    || nsis     || tcl    ||
+|| lisp     || scheme  || asm      || diff     || props  ||
+|| ps       || ruby    || smalltalk|| vhdl     || kix    ||
+|| au3      || caml    || ada      || verilog  || matlab ||
+|| haskell  || inno    || search   || cmake    || yaml   ||
+|| external || global ||
 
 There is no special editor for snippet files by now. Notepad++ itself is a good XML editor, using collapse level 2 (shortcut ALT+2) will give you a clean view.
+
+== File format ==
+
+Basic layout of a snippet file is like:
+
+<code language="xml"><?xml version="1.0"?>
+<CodeExpress>
+
+<snippet tag="gpl">...</snippet>
+
+<snippet tag="lorem">...</snippet>
+
+...
+
+</CodeExpress></code>
+
+
+Individual snippet looks like:
+
+<code language="xml"><snippet tag="demo">
+
+<var name="foo"> `<![CDATA[  foo=@{_} ]]>` </var>
+
+<var name="bar" optional="1"></var>
+
+<code>
+
+`<![CDATA[`This is just a demo.
+@{foo}
+@{bar}
+`]]>`
+
+</code>
+
+</snippet></code>
+
+  * A snippet must have a "tag" attribute.
+  * A snippet can have none or some variables, currently five at most.
+  * Code template should be put inside `<code>`...`</code>` tag with CDATA section markup.
+  * A vaiable must have a "name" attribute, and can have an optional "optional" attribute.
