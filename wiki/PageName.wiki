@@ -1,0 +1,20 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+You can find some demo at:
+
+http://youtu.be/7xNeUbsScUc
+
+= How to use =
+
+  * TAB-trigger: simply key-in the "tag" of a snippet, then hit TAB key.
+  * Visit placeholder marks: "ALT+," and "ALT+."
+  * Show the input dialog: "ALT+Enter".
+
+= How to edit snippet files =
+
+The snippet files are stored in XML format, one XML file for one language. To create a snippet file for a language, you need to create a XML file with name _"language.xml"_ under _"Notepad++/plugin/config/CodeExpress"_. Supported language names are
+
+
+There is no special editor for snippet files by now. Notepad++ itself is a good XML editor, using collapse level 2 (shortcut ALT+2) will give you a clean view.
