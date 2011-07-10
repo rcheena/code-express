@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<CodeExpress>
+
+<snippet tag="div">
+<var name="id" optional="1"><![CDATA[ id="@{_}"]]></var>
+<var name="class" optional="1"><![CDATA[ class="@{_}"]]></var>
+<code>
+<![CDATA[<div@{id}@{class}>@{SEL}</div>
+]]>
+</code>
+</snippet>
+
+
+<snippet tag="lorem">
+<code>
+<![CDATA[Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
+non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+]]>
+</code>
+</snippet>
+
+
+<snippet tag="sw">
+<var name="expr"></var>
+<var name="case1" optional="1">
+<![CDATA[case @{_}:
+
+    break;
+]]>
+</var>
+<var name="case2" optional="1">
+<![CDATA[case @{_}:
+
+    break;
+]]>
+</var>
+<var name="case3" optional="1">
+<![CDATA[case @{_}:
+
+    break;
+]]>
+</var>
+<var name="case4" optional="1">
+<![CDATA[case @{_}:
+
+    break;
+]]>
+</var>
+<code>
+<![CDATA[switch (@{expr}) {
+@{case1}@{case2}@{case3}@{case4}default:
+
+}
+]]>
+</code>
+</snippet>
+
+
+<snippet tag="forit">
+<var name="iterator"></var>
+<var name="container"></var>
+<code>
+<![CDATA[for (@{iterator} = @{container}.begin(); @{iterator} != @{container}.end(); ++@{iterator}) {
+    @{}
+}
+]]>
+</code>
+</snippet>
+
+
+<snippet tag="ifel">
+<var name="cond"></var>
+<code>
+<![CDATA[if (@{cond}) {
+    @{SEL}
+} else {
+
+}
+]]>
+</code>
+</snippet>
+
+
+<snippet tag="ig">
+<var name="def"></var>
+<code>
+<![CDATA[#ifndef @{def}
+#define @{def}
+
+@{SEL}
+
+#endif
+]]>
+</code>
+</snippet>
+
+
+</CodeExpress>

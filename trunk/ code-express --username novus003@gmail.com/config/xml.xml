@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<CodeExpress>
+
+<snippet tag="snippet">
+<var name="var1"></var>
+<var name="var2"></var>
+<code>
+<![CDATA[
+<snippet tag="@{tag}">
+<var name="@{var1}"></var>
+<var name="@{var2}"></var>
+<code>
+</code>
+</snippet>
+]]>
+</code>
+</snippet>
+
+</CodeExpress>
