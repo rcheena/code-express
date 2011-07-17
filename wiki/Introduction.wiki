@@ -6,6 +6,10 @@ You can find some demo at:
 
 http://youtu.be/7xNeUbsScUc
 
+= Install =
+
+Download and extract this plug-in, copy "Plugin" folder under your Notepad++ install position.
+
 = How to use =
 
   * TAB-trigger: simply key-in the "tag" of a snippet, then hit TAB key.
@@ -71,8 +75,11 @@ Individual snippet looks like:
     * optional="1" indicate that if no value is given, this variable will not apear in the final code.
   * Code template should be put inside `<code>`...`</code>` tag with CDATA section markup.
   * You can add hot spots inside the code template:
-    * Any pattern matchs "@{[A-Za-z0-9]*}" will be treated as a hot spot, which can be visited using "ALT+," and "ALT+."
+    * Any pattern matches "`@{[A-Za-z0-9]*}`" will be treated as a hot spot, which can be visited using "ALT+," and "ALT+."
     * @{} will be erased automatically when it is selected by "ALT+," or "ALT+."
     * If the text inside @{...} matches a variable name, it also serves as a placeholder of the variable.
     * @{SEL} is reserved, means insert selected text here. If no text is selected before triggering this snippet, @{SEL} will be replaced by @{}.
+
+= Known Problems =
+
     
