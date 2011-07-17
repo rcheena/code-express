@@ -26,7 +26,7 @@ The snippet files are stored in XML format, one XML file for one language. To cr
 || ps       || ruby    || smalltalk|| vhdl     || kix    ||
 || au3      || caml    || ada      || verilog  || matlab ||
 || haskell  || inno    || search   || cmake    || yaml   ||
-|| external || global ||
+|| external || global  ||
 
 There is no special editor for snippet files by now. Notepad++ itself is a good XML editor, using collapse level 2 (shortcut ALT+2) will give you a clean view.
 
@@ -67,5 +67,12 @@ Individual snippet looks like:
 
   * A snippet must have a "tag" attribute.
   * A snippet can have none or some variables, currently five at most.
-  * Code template should be put inside `<code>`...`</code>` tag with CDATA section markup.
   * A vaiable must have a "name" attribute, and can have an optional "optional" attribute.
+    * optional="1" indicate that if no value is given, this variable will not apear in the final code.
+  * Code template should be put inside `<code>`...`</code>` tag with CDATA section markup.
+  * You can add hot spots inside the code template:
+    * Any pattern matchs "@{[A-Za-z0-9]*}" will be treated as a hot spot, which can be visited using "ALT+," and "ALT+."
+    * @{} will be erased automatically when it is selected by "ALT+," or "ALT+."
+    * If the text inside @{...} matches a variable name, it also serves as a placeholder of the variable.
+    * @{SEL} is reserved, means insert selected text here. If no text is selected before triggering this snippet, @{SEL} will be replaced by @{}.
+    
