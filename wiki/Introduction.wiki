@@ -18,21 +18,20 @@ Download and extract this plug-in, copy "Plugin" folder under your Notepad++ ins
 
 = How to edit snippet files =
 
-The snippet files are stored in XML format, one XML file for one language. To create a snippet file for a language, you need to create a XML file with name _"language name.xml"_ under _"Notepad++/plugin/config/CodeExpress"_. Supported language names are
+The snippet files are stored in XML format, one XML file for one language. Global.xml is always active. To create a snippet file for a language, you need to create a XML file with name _"language-name.xml"_ under _"Notepad++/plugin/config/CodeExpress"_. Supported language names are
 
-|| txt      || php     || c        || cpp      || cs     ||
-|| objc     || java    || rc       || html     || xml    ||
-|| makefile || pascal  || batch    || ini      || nfo    ||
-|| user     || asp     || sql      || vb       || js     ||
-|| css      || perl    || python   || lua      || tex    ||
-|| fortran  || bash    || flash    || nsis     || tcl    ||
-|| lisp     || scheme  || asm      || diff     || props  ||
-|| ps       || ruby    || smalltalk|| vhdl     || kix    ||
-|| au3      || caml    || ada      || verilog  || matlab ||
-|| haskell  || inno    || search   || cmake    || yaml   ||
-|| external || global  ||
+|| text     || php      || c        || cpp      || cs       || objc       ||
+|| java     || rc       || html     || xml      || makefile || pascal     ||
+|| batch    || ini      || ascii    || user     || asp      || sql        ||
+|| vb       || js       || css      || perl     || python   || lua        ||
+|| tex      || fortran  || bash     || flash    || nsis     || tcl        ||
+|| lisp     || scheme   || asm      || diff     || props    || ps         ||
+|| ruby     || smalltalk|| vhdl     || kix      || au3      || caml       ||
+|| ada      || verilog  || matlab   || haskell  || inno     || search     ||
+|| cmake    || yaml     || cobol    || gui4cli  || d        || powershell ||
+|| r        || jsp      || external || global   ||          ||            ||
 
-There is no special editor for snippet files by now. Notepad++ itself is a good XML editor, using collapse level 2 (shortcut ALT+2) will give you a clean view.
+There is no special editor for snippet files by now. Notepad++ itself is a good XML editor, using collapse level 2 (shortcut ALT+2) will give you a clean view. You can open the snippet file for the language your are using through menu _"Plugins/Code Express/Edit Current Snippet"_.
 
 == File format ==
 
@@ -70,7 +69,7 @@ Individual snippet looks like:
 </snippet></code>
 
   * A snippet must have a "tag" attribute.
-  * A snippet can have none or some variables, currently five at most.
+  * A snippet can have none or some variables, currently *6* at most.
   * A vaiable must have a "name" attribute, and can have an optional "optional" attribute.
     * optional="1" indicate that if no value is given, this variable will not apear in the final code.
   * Code template should be put inside `<code>`...`</code>` tag with CDATA section markup.
